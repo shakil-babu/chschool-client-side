@@ -1,0 +1,16 @@
+
+.add-admin-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;  
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.add-admin-form input{
+    border: 2px solid #178f7f;
+    padding: 10px;
+    outline-style: none;
+    margin-bottom: 10px;
+}

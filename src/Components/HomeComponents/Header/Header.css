@@ -1,0 +1,37 @@
+/* ====================== header main area ================== */
+.header-main-area{
+    background-image: url('../../../utilities/biddaloy.jpg');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:60vh;
+}
+
+
+/* ------------------- image overly ---------------- */
+.img-overly{
+    background-color: #178f7f80;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-overly h5{
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+/* ====================== responsive =============================== */
+@media screen and (max-width:568px){
+    .img-overly h5{
+        font-size: 12px;
+    }
+}

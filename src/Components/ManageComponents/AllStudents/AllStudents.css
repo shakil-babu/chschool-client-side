@@ -1,0 +1,72 @@
+.all-students-area{
+    overflow-y: scroll;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.students-layout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    font-family: monospace;
+    padding: 30px 0;
+}
+
+.student-manage-card{
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.student-manage-card img{
+    width: 90%;
+    height: 180px;
+}
+
+.search-area{
+    background-color:#178f7f;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.search-area input{
+    padding: 10px;
+    width: 97.5%;
+    border-radius: 10px;
+    border: none;
+    outline-style: none;
+}
+.student-manage-card h1{
+    font-size: 12px;
+}
+.student-manage-card h3{
+    font-size: 10px;
+}
+.student-manage-card button{
+    background-color: red;
+    padding: 10px;
+    width: 100%;
+    color: #ffff;
+    border-radius: 10px;
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:992px){
+    .students-layout{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media  screen and (max-width:768px) {
+    .students-layout{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

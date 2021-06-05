@@ -1,0 +1,125 @@
+
+.img-title-form{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-title-form input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #178f7f;
+}
+.image-input{
+    display: flex;
+    background-color: #eee;
+    padding: 10px;
+    color: #178f7f;
+    align-items: center;
+    border: 1px solid #178f7f;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.image-button{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.image-button .img{
+    font-size: 35px;
+    margin-right: 8px;
+    color: #178f7f;
+}
+.image-input input{
+    display: none;
+}
+
+.gray{
+    background-color: gray !important;
+    cursor:none;
+}
+
+.form-btn{
+    border: none;
+    outline-style: none;
+    background-color: #178f7f;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+
+/*  showcase area  */
+.data-showcase-area{
+    padding: 50px 0;
+}
+.data-box{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+}
+.data-box h5{
+    margin: 0;
+}
+.data-box img{
+    border-radius: 15px;
+    width: 100%;
+    margin: 10px 0;
+}
+.data-box button{
+    background-color: rgb(182, 9, 9);
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline-style: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.showcase-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.sh-title{
+    border: 2px solid #178f7f;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sh-title h3{
+    margin: 0;
+    padding-bottom: 8px;
+}
+.sh-title button{
+    border: none;
+    outline-style: none;
+    color: #fff;
+    background-color: #178f7f;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+@media  screen and (max-width:992px) {
+    .showcase-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media  screen and (max-width:768px) {
+    .showcase-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

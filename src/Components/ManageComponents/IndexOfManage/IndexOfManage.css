@@ -1,0 +1,46 @@
+
+.admin-panel-index{
+    border: 2px solid #178f7f;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 30px;
+}
+
+.admin-panel-index .si{
+    font-size:40px;
+    color: #178f7f;
+}
+
+.admin-panel-index h4{
+    margin: 0;
+    color: #178f7f;
+}
+
+
+.admin-panel-greeting{
+    padding: 20px 0;
+}
+.admin-panel-greeting h2, .admin-panel-greeting h1{
+    margin: 0;
+}
+
+.admin-panel-greeting h2{
+    font-size: 20px;
+    color: #178f7f;
+}
+.admin-panel-greeting h1{
+    font-size: 35px;
+    color: #178f7f;
+}
+.index-of-manage{
+    padding: 40px 0;
+}
+
+@media screen and (max-width:576px){
+    .admin-panel-greeting h2{
+        font-size: 16px;
+    }
+   .admin-panel-greeting p{
+       font-size: 14px;
+   }
+}

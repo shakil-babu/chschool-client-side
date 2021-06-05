@@ -1,0 +1,23 @@
+
+
+.asked-questions-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+}
+
+.asked-questions-form textarea{
+    border: 2px solid #178f7f;
+    padding: 10px;
+    outline-style: none;
+}
+
+.asked-questions-form input{
+    margin-bottom: 10px;
+    outline-style: none;
+    border: 1px solid #178f7f;
+    padding: 10px;
+}

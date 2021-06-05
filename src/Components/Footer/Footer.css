@@ -1,0 +1,98 @@
+/* ====================== footer main area =================== */
+
+.footer-main-area{
+    background-color: #000;
+    padding-top: 40px;
+}
+.footer-grid-layout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+}
+
+
+
+/* ========= footer logo area ============== */
+.footer-logo-area h5{
+    color: #178f7f;
+    font-size: 16px;
+}
+.school-icon{
+    font-size: 80px;
+    color: #178f7f;
+}
+.footer-logo-area h5{
+    margin: 0;
+}
+
+
+
+/* =============== footer address area ========= */
+.footer-address-area h4{
+    color: #178f7f;
+    border-bottom: 2px solid #178f7f;
+    padding-bottom: 8px;
+    
+}
+.footer-address-area h5{
+    margin: 0;
+    color: #178f7f;
+    margin-bottom: 10px;
+}
+
+
+/* =========== footer-quick-visit ========= */
+
+.footer-quick-visit h4{
+    color: #178f7f;
+    border-bottom: 2px solid #178f7f;
+    padding-bottom: 8px;
+}
+
+.footer-quick-visit li{
+    list-style: none;
+    padding-bottom: 6.8px;
+}
+
+.footer-quick-visit li a{
+    text-decoration: none;
+    color: #178f7f;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* ================== developer info style ========================= */
+.developer{
+    text-align: right ;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 40px;
+    padding-top: 50px;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+.developer a{
+    color: #178f7f;
+}
+
+
+
+/* ================= responsive ======================= */
+@media screen and (max-width:992px) {
+    .footer-grid-layout{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .footer-grid-layout{
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    .developer{
+        text-align: center;
+    }
+}

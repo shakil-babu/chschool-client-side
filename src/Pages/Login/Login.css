@@ -1,0 +1,98 @@
+
+
+.login-page{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin:80px auto;
+}
+.login-form h5{
+    margin: 0;
+    padding-bottom: 15px;   
+}
+.login-page h4{
+    margin: 0;
+    color: #178f7f;
+    padding-bottom: 15px;
+}
+.login-form h4{
+    margin: 0;
+    color: #178f7f;
+    padding-bottom: 15px;
+}
+.login-form input{
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.login-form textarea{
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.login-btn{
+    text-transform: uppercase;
+    outline: 0;
+    background: #178f7f;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.flex-new{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+.flex-new h6{
+    margin: 0;
+    margin-right: 8px;
+}
+
+.google-sign-in{
+    text-align: center;
+}
+.google-sign-in h6{
+    margin: 0;
+    padding: 12px 0;
+}
+.google-sign-in button{
+    width: 100%;
+    background-color: #178f7f;
+    padding: 10px;
+    outline-style: none;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.gi{
+    font-size: 20px;
+    margin-right: 10px;
+}
+@media  screen and (max-width:576px) {
+    .login-page{
+        width: 80%;
+        padding: 15px;
+    }
+}

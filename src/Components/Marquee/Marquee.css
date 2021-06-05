@@ -1,0 +1,41 @@
+/* ============================ main div ====================== */
+.ticker {
+    display: flex;
+    height: 60px;
+    position:relative ;
+}
+.news {
+    background-color: #178f7fc9;
+    width: 100%;
+
+}
+.title {
+    text-align: center;
+    background-color: #178f7f;
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h5{
+    color: #fff;
+    font-size: 14px;
+}
+.news marquee h5{
+    color: #fff;
+    font-size: 14px;
+}
+
+
+
+/* ========================= responsive ======================= */
+@media screen and (max-width:568px){
+    .title h5{
+        font-size: 11px;
+    }
+}

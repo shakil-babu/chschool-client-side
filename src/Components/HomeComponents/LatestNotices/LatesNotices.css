@@ -1,0 +1,31 @@
+/* ================== Latest notice area ================= */
+.latest-notices-area{
+    width: 100%;
+}
+.latest-notices-area h4{
+    background-color: #178f7f;
+    padding: 10px;
+    color: #fff;
+    margin: 30px 0 10px 0 ;
+}
+
+.notice-box{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.latest-notice{
+    border-bottom: 1px solid #178f7f;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.latest-notice h5, .latest-notice h6{
+    margin: 0;
+    color: #178f7f;
+    padding-bottom: 4px;
+}
+.latest-notice h5{
+    font-family: monospace;
+    font-size: 15px;
+}

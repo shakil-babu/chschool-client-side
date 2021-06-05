@@ -1,0 +1,252 @@
+
+/* ========================= sidebar main area ====================== */
+.sidebar-main-area{
+    display: flex;
+
+}
+
+/* ===================== sidebar left */
+.sidebar-left-main-part{
+    position: sticky;
+    position: -webkit-sticky;
+    position:-moz-sticky;
+    position:-ms-sticky;
+    position:-o-sticky;
+    height: auto;
+    background-color: #178f7f;
+    padding: 0px 30px 40px 30px;
+    width: 20%;
+    box-shadow: .5px 0 7px 0 #575757;
+
+}
+
+
+.sidebar-left-main-part h1{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.all-info-part{
+    width: 80%;
+    background-color:#f4f5f7;
+}
+
+.book-link{
+    margin-left: 30px;
+}
+
+
+.info-main-part-here{
+    padding: 20px 30px;
+
+}
+.navigation-link{
+    margin-top: 50px;
+}
+
+
+/* ======================= admin panel title =================== */
+.admin-panel-title{
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 30px;
+}
+.admin-panel-title .si{
+    font-size:40px;
+    color: #fbfbfbcc;
+}
+.admin-panel-title h4{
+    margin: 0;
+    color: #fbfbfbec;
+}
+
+/* ======================= sidebar item active style ====================== */
+.active-style{
+    background-color: #fbfbfbcc;
+    padding: 0px 10px;
+}
+.active-style .action-icon{
+    color:#000;
+}
+.active-style p{
+    color: #000 !important;
+}
+
+/* ================= action flex area ======================== */
+.action-flex{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+
+}
+.action-icon{
+    color: #fff;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.action-flex p{
+    font-size: 14px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.action-flex:hover{
+    background-color: #fbfbfbcc;
+    padding: 0 10px;
+}
+.action-flex:hover .action-icon, .action-flex:hover p{
+    color: #000 !important;
+}
+.side-bar-icon{
+    display: none;
+}
+
+
+/* ========================== app bar ========================= */
+.appbar{
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    display: flex;
+    align-items: center;
+}
+.appbar-bar-icon{
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+.appbar-bar-icon .bar{
+    font-size: 30px;
+    color: #178f7f;
+    cursor: pointer;
+
+}
+.cross{
+    font-size: 30px;
+    color: rgb(156, 13, 13);
+    cursor: pointer;
+    text-align: right;
+    margin: 0;
+    padding: 15px 0;
+    display: none;
+}
+
+
+.appbar-admin-profile{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-right: 2px solid #178f7f;
+    width: 180px;
+    margin-left: 5px;
+}
+.img-box img{
+    width: 40px;
+    border: 5px solid #178f7f;
+    border-radius: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.admin-name{
+    margin-left: 8px;
+}
+.admin-name h5{
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #178f7f;
+}
+.admin-name h6{
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #178f7f;
+}
+
+/* =============== bar style */
+.fabar{
+    font-size: 50px;
+    color: #178f7f;
+    display: none;
+    cursor: pointer;
+    margin: 20px;
+}
+
+/* ===================================== responsive ============================================= */
+
+
+/* 992 */
+@media screen and (max-width:992px){
+    .sidebar-left-main-part h1{
+        font-size: 15px;
+    }
+    .action-flex p{
+        font-size: 10px;
+    }
+}
+
+
+/* 768 */
+@media screen and (max-width:768px){
+    .sidebar-main-area{
+        flex-direction: column;
+    }
+    .sidebar-main-area h1{
+        display: none;
+    }
+    .sidebar-left-main-part{
+        width: 90%;
+        height: 100%;
+       
+    }
+    .action-flex{
+        margin-right: 30px;
+    }
+    .action-flex p{
+        font-size: 18px;
+    }
+    .side-bar-icon{
+        display: block;
+        font-size: 25px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .all-info-part{
+        width: 100%;
+    }
+
+    .cross{
+        display: block;
+    }
+    /* ============== appbar  */
+    .appbar-bar-icon{
+        display: block;
+    }
+}
+
+
+/* 576 */
+@media screen and (max-width:576px){
+    .search-btn{
+        padding: 10px;
+    }
+    .action-flex p{
+        font-size: 11px;
+    }
+
+    .sidebar-left-main-part{
+        width: 88%;
+       
+    }
+}
+
+@media screen and (max-width:450px){
+    .sidebar-left-main-part{
+        width: 85%;
+    }
+}
+@media screen and (max-width:300px){
+    .sidebar-left-main-part{
+        width: 80%;
+    }
+}

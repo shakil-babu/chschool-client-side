@@ -1,0 +1,69 @@
+
+/* ===========  layout home ================ */
+.layout-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* =============== slider layout ================== */
+.slider-layout{
+    padding: 30px 0;
+    width: 75%;
+    margin-right: 50px;
+}
+
+
+/* ================ others layout ================== */
+.others-layout{
+    width: 25%;
+    padding-left: 15px;
+    border-left: 1px solid #178f7f;
+    ;
+}
+
+
+.fq-area h4{
+    background-color: #178f7f;
+    padding: 10px;
+    width: 250px;
+    color: #fff;
+}
+
+
+/* =================== for responsive ====================== */
+@media screen and (max-width:992px){
+    .layout-flex{
+        flex-direction: column;
+    }
+
+    .slider-layout{
+        width: 100%;
+    }
+
+    .others-layout{
+        width: 100%;
+        border-left: 0 solid #000;
+
+    }
+
+}
+
+@media screen and (max-width:768px){
+
+}
+
+
+@media screen and (max-width:568px){
+    .home-slider-main{
+        display: none;
+    }
+    .others-layout{
+        padding-left: 0;
+    }
+    .fq-area h4{
+        width: 100%;
+    }
+}
+

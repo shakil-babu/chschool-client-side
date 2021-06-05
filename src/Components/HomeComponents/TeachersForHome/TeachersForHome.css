@@ -1,0 +1,158 @@
+/* ======================== main area style ===================== */
+.teachers-for-home-area{
+    padding: 50px 0;
+}
+
+/* grid layout */
+.teachers-for-home-grid-layout{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.teachers-for-home-area h3{
+    font-size: 16px;
+    background-color: #178f7f;
+    padding: 10px;
+    width: 250px;
+    color: #fff;
+}
+
+/* team style */
+.our-team {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: #f7f5ec;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  
+  .our-team .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #178f7f;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+  }
+  
+  .our-team:hover .picture::before {
+    height: 100%;
+  }
+  
+  .our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #178f7f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+  }
+  
+  .our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+  }
+  
+  .our-team .title {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform: capitalize;
+  }
+  
+  .our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #178f7f;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+    color: #fff;
+  }
+  
+  .our-team:hover .social {
+    bottom: 0;
+  }
+  
+  .team-content{
+      padding: 20px 0;
+}
+  .team-content h3, .team-content h4{
+      margin: 0;
+}
+
+
+.line-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.line-flex .line{
+    background-color: #178f7f;
+    width: 35%;
+    height: 3px;
+}
+  
+.btn{
+    background-color:#178f7f;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    margin: 0 8px;
+    width: 30%;
+    text-decoration: none;
+
+}
+
+/* ========================= responsive ============================= */
+
+  @media screen and (max-width:568px){
+    .teachers-for-home-area h3{
+        width: 95%;
+    }
+  }
+  @media screen and (max-width:768px){
+    .teachers-for-home-grid-layout{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media screen and (max-width:250px){
+    .teachers-for-home-area h3{
+        width: 90%;
+    }
+  }

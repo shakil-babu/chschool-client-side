@@ -1,0 +1,26 @@
+/* ======================= Important links area */
+.important-links-area h4{
+    background-color: #178f7f;
+    padding: 10px;
+    color: #fff;
+    margin: 30px 0 10px 0 ;
+}
+
+
+/* ============ links box style */
+.links-box-area{
+    background-color: #fff;
+    padding: 15px;
+}
+
+.links-box-area a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.links-area{
+    background-color: #178f7fd2;
+    padding: 8px;
+    margin-bottom: 8px;
+}

@@ -1,0 +1,29 @@
+.search-student-area{
+    padding: 50px 0;
+}
+.search-student-area h5{
+    margin: 0;
+    padding-bottom: 15px;
+}
+.search-main-area{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 50px 30px;
+    border-radius: 15px;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-form input{
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}

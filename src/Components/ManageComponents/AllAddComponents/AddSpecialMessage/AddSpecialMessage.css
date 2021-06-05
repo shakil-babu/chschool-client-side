@@ -1,0 +1,103 @@
+
+/* =============== title style ======================= */
+
+.title-underline{
+    text-align: center;
+}
+.title-underline h2{
+    margin: 0;
+    font-size: 20px;
+}
+.title-underline .underline{
+    background-color: #178f7f;
+    height: 3px;
+    width: 80px;
+    margin:8px auto;
+}
+
+/* ======================= direction box style ======================= */
+.direction-for-message{
+    background-color: #178f7f;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 20px 0;
+}
+
+
+
+/* ==================== form design ========================= */
+.sp-message-form{
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    margin-top: 15px;
+
+}
+.sp-message-form textarea{
+    border: 2px solid #178f7f;
+    padding: 8px;
+}
+
+.success-msg{
+    padding: 10px 0;
+    color: #178f7f;
+}
+.success-msg h5{
+    display: flex;
+    align-items: center;
+}
+.success-msg h5 .check{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+/* ================ warning style */
+.warn-msg{
+    padding: 10px 0;
+    color: red;
+}
+.warn-msg h5{
+    display: flex;
+    align-items: center;
+}
+.warn-msg h5 .warn{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* ========================== sm loaded data style ========================== */
+.msg-box{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+
+/* ================================ responsive ==========================================*/
+
+@media screen and (max-width:992px){
+    
+}
+ 
+@media screen and (max-width:768px){
+    .title-underline h2{
+        font-size: 15px;
+    }
+    .direction-for-message h5{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:576px){
+    
+}
