@@ -10,6 +10,7 @@ import Manage from './Pages/Manage/Manage';
 import Notices from './Pages/Notices/Notices';
 import SearchStudent from './Pages/SearchStudent/SearchStudent';
 import Teachers from './Pages/Teachers/Teachers';
+import TeachersDetails from './Pages/Teachers/TeachersDetails';
 import Workers from './Pages/Workers/Workers';
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/manage' component={Manage}/>
           <Route path='/about-us' component={AboutUs}/>
           <Route path='/teachers' component={Teachers}/>
+          <Route path='/teachers/:id' component={TeachersDetails}/>
           <Route path='/notices' component={Notices}/>
           <Route path='/search-student' component={SearchStudent}/>
           <Route path='/contact' component={Contact}/>

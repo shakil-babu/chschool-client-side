@@ -21,3 +21,56 @@
     border: 1px solid #178f7f;
     padding: 10px;
 }
+
+.fq-number-area{
+    margin-top: 30px;
+}
+
+
+.fq-edit-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.edit-box{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+}
+.edit-box h5, .edit-box h6{
+    margin: 0;
+}
+.edit-box h5{
+    background-color: #178f7f;
+    padding: 8px;
+    color: #fff;
+}
+.edit-box h6{
+    padding: 8px 12px;
+    background-color:#eee;
+    margin-bottom: 15px;
+}
+
+.btn-delete{
+    background-color:orangered;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    float:right;
+}
+.btn-delete:hover{
+    background-color:rgb(197, 64, 16);
+}
+
+
+@media  screen and (max-width:992px) {
+    .fq-edit-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+

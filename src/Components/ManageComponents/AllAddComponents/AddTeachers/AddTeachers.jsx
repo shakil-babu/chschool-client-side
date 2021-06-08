@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaImage } from 'react-icons/fa';
 import './AddTeachers.css';
 import axios from 'axios';
+import { FiCheck } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 const AddTeachers = () => {
 
     const [teachersInfo, setteachersInfo] = useState({
         name:'', img:'', place:'', subject:'', education:'', phone:'', email:'', facebook:'',
         joinDate:'', bloodGroup:'', nationality:'', address:'', hobby:'', opinion:''
     })
-
+    const [success, setSuccess] = useState(false);
 
     // input onChange={InputBlurHandler} blur handler
     const InputBlurHandler = (event) => {
@@ -38,15 +40,21 @@ const AddTeachers = () => {
 
 }
 
+// destructuring
+const {
+    name, img, place, subject, education, phone, email, facebook, joinDate, 
+    bloodGroup, nationality, address, hobby, opinion
+} = teachersInfo ;
+
 // form submit handler 
 const submitHandler = (event) => {
     event.preventDefault();
 
     const tInfo = {
-        name:teachersInfo.name,img:teachersInfo.img, place:teachersInfo.place, subject:teachersInfo.subject, education:teachersInfo.education, phone:teachersInfo.phone,
-        email:teachersInfo.email, facebook:teachersInfo.facebook, joinDate:teachersInfo.joinDate,
-        bloodGroup:teachersInfo.bloodGroup, nationality:teachersInfo.nationality, address:teachersInfo.address, hobby:teachersInfo.hobby,
-        opinion:teachersInfo.opinion
+        name:name,img:img, place:place, subject:subject, education:education, phone:phone,
+        email:email, facebook:facebook, joinDate:joinDate,
+        bloodGroup:bloodGroup, nationality:nationality, address:address, hobby:hobby,
+        opinion:opinion
     }
 
     // post data to database
@@ -60,6 +68,7 @@ const submitHandler = (event) => {
         .then((response) => response.json())
         .then((json) => {
             console.log(json)
+            setSuccess(true)
         });
 
         setteachersInfo({
@@ -68,6 +77,22 @@ const submitHandler = (event) => {
         })
 
 }
+
+// =================== read teachers info ====================
+const [teachers, setTeachers] = useState([]);
+
+const readTeachersInfo = () => {
+    fetch("http://localhost:5000/readTeachers")
+    .then(res => res.json())
+    .then(json => setTeachers(json))
+}
+
+useEffect(() => {
+    readTeachersInfo();     
+    setTimeout(() => {
+        setSuccess(false);
+    },5000)
+}, [])
     return (
         <>
             <section className="add-teachers-area">
@@ -81,29 +106,48 @@ const submitHandler = (event) => {
 
                 {/* form */}
                 <form onSubmit={submitHandler} className='add-admin-form'>
-                    <input onChange={InputBlurHandler} type="text" name='name' placeholder='নাম'/>
+                    <input value={name} onChange={InputBlurHandler} type="text" name='name' placeholder='নাম'/>
                     <div className="image-input">
                         <input onChange={imgHandler} name='img' type="file" accept="image/*" id="imageInput"/>
                         <label for="imageInput" className="image-button"><FaImage className='img'/>শিক্ষকের ফটো দিন</label>
                     </div>
-                    <input onChange={InputBlurHandler} type="text" name='place' placeholder='পদবী'/>
-                    <input onChange={InputBlurHandler} type="text" name='subject' placeholder='কি বিষয়ের শিক্ষক'/>
-                    <input onChange={InputBlurHandler} type="text" name='education' placeholder='শিক্ষাগত যোগ্যতা'/>
-                    <input onChange={InputBlurHandler} type="text" name='phone' placeholder='ফোন নম্বর'/>
-                    <input onChange={InputBlurHandler} type="text" name='email' placeholder='ইমেইল'/>
-                    <input onChange={InputBlurHandler} type="text" name='facebook' placeholder='ফেসবুক (যদি থাকে)'/>
-                    <input onChange={InputBlurHandler} type="text" name='joinDate' placeholder='স্কুলে জয়েনিং তারিখ'/>
-                    <input onChange={InputBlurHandler} type="text" name='bloodGroup' placeholder='রক্তের গ্রুপ'/>
-                    <input onChange={InputBlurHandler} type="text" name='nationality' placeholder='জাতীয়তা'/>
-                    <input onChange={InputBlurHandler} type="text" name='address' placeholder='ঠিকানা'/>
-                    <input onChange={InputBlurHandler} type="text" name='hobby' placeholder='শখ'/>
-                    <textarea onChange={InputBlurHandler} name="opinion" cols="30" rows="5" placeholder='স্কুল সম্পর্কে আপনার মতামত দিন'></textarea>
+                    <input value={place} onChange={InputBlurHandler} type="text" name='place' placeholder='পদবী'/>
+                    <input value={subject} onChange={InputBlurHandler} type="text" name='subject' placeholder='কি বিষয়ের শিক্ষক'/>
+                    <input value={education} onChange={InputBlurHandler} type="text" name='education' placeholder='শিক্ষাগত যোগ্যতা'/>
+                    <input value={phone} onChange={InputBlurHandler} type="text" name='phone' placeholder='ফোন নম্বর'/>
+                    <input value={email} onChange={InputBlurHandler} type="text" name='email' placeholder='ইমেইল'/>
+                    <input value={facebook} onChange={InputBlurHandler} type="text" name='facebook' placeholder='ফেসবুক (যদি থাকে)'/>
+                    <input value={joinDate} onChange={InputBlurHandler} type="text" name='joinDate' placeholder='স্কুলে জয়েনিং তারিখ'/>
+                    <input value={bloodGroup} onChange={InputBlurHandler} type="text" name='bloodGroup' placeholder='রক্তের গ্রুপ'/>
+                    <input value={nationality} onChange={InputBlurHandler} type="text" name='nationality' placeholder='জাতীয়তা'/>
+                    <input value={address} onChange={InputBlurHandler} type="text" name='address' placeholder='ঠিকানা'/>
+                    <input value={hobby} onChange={InputBlurHandler} type="text" name='hobby' placeholder='শখ'/>
+                    <textarea value={opinion} onChange={InputBlurHandler} name="opinion" cols="30" rows="5" placeholder='স্কুল সম্পর্কে আপনার মতামত দিন'></textarea>
 
                     {
                         teachersInfo.img && teachersInfo.hobby ? <button type='submit' className='form-btn'>এড করুন</button>: <button disabled type='submit' className='form-btn gray'>Disabled</button>
                     }
-                   
+
+                    {
+                        success && (
+                            <div className="success-msg">
+                                <h5><FiCheck className='check'/>সফলভাবে এড হয়েছে</h5>
+                            </div>
+                        )
+                    }
                 </form>
+
+                
+                    <div className="students-count">
+                        {
+                            teachers.length > 0 && (
+                                    <div className="sh-title">
+                                        <h3>ডাটাবেসে মোট {teachers.length} টি শিক্ষকের তথ্য যুক্ত করা হয়েছে.</h3>
+                                        <Link to='/manage/allteachers' style={{textDecoration:'none'}}><button>ক্লিক করে দেখুন</button></Link> 
+                                    </div>
+                            )
+                        }
+                </div>
             </section>   
         </>
     )

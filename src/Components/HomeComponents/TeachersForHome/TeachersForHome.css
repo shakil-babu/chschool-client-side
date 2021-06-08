@@ -27,6 +27,8 @@
     position: relative;
     cursor: pointer;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-family: monospace;
+    border-radius: 10px;
   }
   
   .our-team .picture {
@@ -70,7 +72,7 @@
   
   .our-team .picture img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 50%;
     transform: scale(1);
     transition: all 0.9s ease 0s;
@@ -107,10 +109,24 @@
   .team-content{
       padding: 20px 0;
 }
-  .team-content h3, .team-content h4{
+  .team-content h4, .team-content h5{
       margin: 0;
 }
 
+.team-content h4{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.team-content h5{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.team-content small{
+  text-transform: uppercase;
+}
 
 .line-flex{
     display: flex;

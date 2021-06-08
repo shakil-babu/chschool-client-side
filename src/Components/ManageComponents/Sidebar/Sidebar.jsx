@@ -19,6 +19,7 @@ import AddNotice from "../AllAddComponents/AddNotice/AddNotice";
 import AddStudent from "../AllAddComponents/AddStudent/AddStudent";
 import IndexOfManage from "../IndexOfManage/IndexOfManage";
 import AllStudents from "../AllStudents/AllStudents";
+import AllTeachers from "../AllTeachers/AllTeachers";
 
 const routesWithCom = [
 
@@ -69,6 +70,10 @@ const routesWithCom = [
   {
     path:'/manage/allstudents',
     sidebar:() => <AllStudents/>
+  },
+  {
+    path:'/manage/allteachers',
+    sidebar:()=> <AllTeachers/>
   },
   {
       path:'/',
@@ -157,10 +162,14 @@ const toggleHandler = () => {
                     <p>সবগুলো এডমিনস</p>
                     </NavLink>
 
-
                     <NavLink style={{ textDecoration: "none" }} activeClassName={"active-style"} to="/manage/allstudents" className="action-flex">
                     <BsFillPeopleFill className="action-icon" />
-                    <p>সব শিক্ষার্থী</p>
+                    <p>সবগুলো শিক্ষার্থী</p>
+                    </NavLink>
+
+                    <NavLink style={{ textDecoration: "none" }} activeClassName={"active-style"} to="/manage/allteachers" className="action-flex">
+                    <BsFillPeopleFill className="action-icon" />
+                    <p>সবগুলো শিক্ষক</p>
                     </NavLink>
                  </div>
           </div>

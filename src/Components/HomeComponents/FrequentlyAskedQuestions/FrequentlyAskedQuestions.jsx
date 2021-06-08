@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './FrequentlyAskedQuestions.css';
 import {FiPlus , FiMinus} from 'react-icons/fi';
-const FrequentlyAskedQuestions = ({question}) => {
+const FrequentlyAskedQuestions = ({data}) => {
     const [isContent, setIsContent] = useState(false);
 
 
@@ -12,7 +12,7 @@ const FrequentlyAskedQuestions = ({question}) => {
         <>
             <div className="frequently-single-area">
                 <div onClick={toggleHandler} className="flex-icon-question">
-                <h5>{question.title}</h5>
+                <h5>{data.question}</h5>
                 {
                     isContent ? <FiMinus className='question-icon'/> : <FiPlus className='question-icon'/>
                 }
@@ -21,7 +21,7 @@ const FrequentlyAskedQuestions = ({question}) => {
                 {
                     isContent && (
                         <div className="content-for-fre">
-                            <h5>{question.details}</h5>
+                            <h5>{data.answere}</h5>
                         </div>
                     )
                 }
